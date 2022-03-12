@@ -1,0 +1,31 @@
+﻿<Window x:Class="CITRUS.RefreshDuctFittingsStartWPF"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CITRUS"
+        mc:Ignorable="d"
+        Title="Внимание!!!" Height="200" Width="420" WindowStyle="ToolWindow"
+        WindowStartupLocation="CenterScreen" MinWidth="420" MinHeight="200" MaxWidth="420" MaxHeight="200"
+        KeyDown="RefreshDuctFittingsStartWPF_KeyDown">
+    <Grid>
+
+        <Button x:Name="btn_Yes" Content="Да" HorizontalAlignment="Right" Margin="0,0,125,10" VerticalAlignment="Bottom" Width="100" Height="25" Click="btn_Ok_Click"/>
+        <Button x:Name="btn_Not" Content="Нет" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="100" Height="25" Click="btn_Cancel_Click"/>
+        <GroupBox x:Name="groupBox_RefreshOption" Header="Вариант обновления:" Margin="10,10,10,100" HorizontalContentAlignment="Stretch" Padding="0" Grid.IsSharedSizeScope="True">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="35*"/>
+                    <ColumnDefinition Width="40*"/>
+                    <ColumnDefinition Width="40*"/>
+                </Grid.ColumnDefinitions>
+                <RadioButton x:Name="radioButton_Selected" Content="Выбранные" Margin="5" VerticalContentAlignment="Center" IsChecked="True"/>
+                <RadioButton x:Name="radioButton_VisibleInView" Content="Видимые на виде" Grid.Column="1" Margin="5" VerticalContentAlignment="Center"/>
+                <RadioButton x:Name="radioButton_WholeProject" Content="Во всем проекте" Grid.Column="2" Margin="5" VerticalContentAlignment="Center" HorizontalAlignment="Right"/>
+
+            </Grid>
+        </GroupBox>
+        <Label x:Name="label" Content="Обновление фитингов внесет изменение в модель с учетом" HorizontalAlignment="Left" Margin="10,75,0,0" VerticalAlignment="Top" Width="372"/>
+        <Label x:Name="label1" Content="настроек трассировки воздуховодов по умолчанию. Продолжить?" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

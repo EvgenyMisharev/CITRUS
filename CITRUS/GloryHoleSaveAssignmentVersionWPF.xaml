@@ -1,0 +1,26 @@
+﻿<Window x:Class="CITRUS.GloryHoleSaveAssignmentVersionWPF"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CITRUS"
+        mc:Ignorable="d"
+        Title="Задание на отверстия" Height="150" Width="450" WindowStyle="ToolWindow"
+        WindowStartupLocation="CenterScreen" MinWidth="450" MinHeight="150" MaxWidth="450" MaxHeight="150"
+        KeyDown="GloryHoleSaveAssignmentVersionWPF_KeyDown">
+    <Grid>
+        <Button x:Name="btn_Ok" Content="Ок" HorizontalAlignment="Right" Margin="0,0,125,10" VerticalAlignment="Bottom" Width="100" Height="25" Click="btn_Ok_Click"/>
+        <Button x:Name="btn_Cancel" Content="Отмена" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="100" Height="25" Click="btn_Cancel_Click"/>
+        <GroupBox x:Name="groupBox_ActionSelection" Header="Выберите действие:" Margin="10,10,10,40">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <RadioButton x:Name="radioButton_SaveAssignmentVersion" Content="Сохранить версию задания" Grid.Column="0" Margin="0" Width="170" Height="15" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="True"/>
+                <RadioButton x:Name="radioButton_ResetAssignmentVersion" Content="Сбросить версию задания" Grid.Column="1" Margin="0" Width="170" Height="15" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>
+    

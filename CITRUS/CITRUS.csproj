@@ -1,0 +1,816 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8D40930C-7911-4E74-8029-9039E4E1B141}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CITRUS</RootNamespace>
+    <AssemblyName>CITRUS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Google.Apis, Version=1.50.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.50.0\lib\net45\Google.Apis.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth, Version=1.50.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.50.0\lib\net45\Google.Apis.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth.PlatformServices, Version=1.50.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.50.0\lib\net45\Google.Apis.Auth.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Core, Version=1.50.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Core.1.50.0\lib\net45\Google.Apis.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.PlatformServices, Version=1.50.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.50.0\lib\net45\Google.Apis.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Sheets.v4, Version=1.50.0.2245, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Sheets.v4.1.50.0.2245\lib\net45\Google.Apis.Sheets.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=2.0.4.3, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.2.0.4\lib\net452\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=4.3.0.3, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.4.3.0\lib\net452\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.1\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore, Version=3.1.16.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.EntityFrameworkCore.3.1.16\lib\netstandard2.0\Microsoft.EntityFrameworkCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore.Abstractions, Version=3.1.16.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.EntityFrameworkCore.Abstractions.3.1.16\lib\netstandard2.0\Microsoft.EntityFrameworkCore.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Abstractions, Version=3.1.16.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Caching.Abstractions.3.1.16\lib\netstandard2.0\Microsoft.Extensions.Caching.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Memory, Version=3.1.16.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Caching.Memory.3.1.16\lib\netstandard2.0\Microsoft.Extensions.Caching.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration, Version=3.1.16.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.3.1.16\lib\netstandard2.0\Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=3.1.16.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Abstractions.3.1.16\lib\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Binder, Version=3.1.16.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Binder.3.1.16\lib\netstandard2.0\Microsoft.Extensions.Configuration.Binder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=3.1.16.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.3.1.16\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=3.1.16.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.3.1.16\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=3.1.16.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.3.1.16\lib\netstandard2.0\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=3.1.16.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.3.1.16\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=3.1.16.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.3.1.16\lib\netstandard2.0\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=3.1.16.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.3.1.16\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Speech, Version=11.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Microsoft SDKs\Speech\v11.0\Assembly\Microsoft.Speech.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.22.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 8.0.22\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="RevitAPI">
+      <HintPath>C:\Program Files\Autodesk\Revit 2019\RevitAPI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI">
+      <HintPath>C:\Program Files\Autodesk\Revit 2019\RevitAPIUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=1.2.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.7.1\lib\net461\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.7.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.7.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.1\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlphanumComparatorFastString.cs" />
+    <Compile Include="ApartmentLayout.cs" />
+    <Compile Include="App.cs" />
+    <Compile Include="Axis3D2D.cs" />
+    <Compile Include="CapitalMaker.cs" />
+    <Compile Include="CIT_00_0_GoogleSheets\RevitDataToGoogleSheets.cs" />
+    <Compile Include="CIT_00_1_FillingParameterLevel\CIT_00_1_FillingParameterLevel.cs" />
+    <Compile Include="CIT_00_1_FillingParameterLevel\CIT_00_1_FillingParameterLevelProgressBarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CIT_00_1_FillingParameterLevel\CIT_00_1_FillingParameterLevelProgressBarForm.Designer.cs">
+      <DependentUpon>CIT_00_1_FillingParameterLevelProgressBarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CIT_03_1_WallFinishCreator\CIT_03_1_WallFinishCreator.cs" />
+    <Compile Include="CIT_03_1_WallFinishCreator\CIT_03_1_WallFinishCreatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CIT_03_1_WallFinishCreator\CIT_03_1_WallFinishCreatorForm.Designer.cs">
+      <DependentUpon>CIT_03_1_WallFinishCreatorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CIT_03_1_WallFinishCreator_v2\CIT_03_1_WallFinishCreatorForm_v2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CIT_03_1_WallFinishCreator_v2\CIT_03_1_WallFinishCreatorForm_v2.Designer.cs">
+      <DependentUpon>CIT_03_1_WallFinishCreatorForm_v2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CIT_03_1_WallFinishCreator_v2\CIT_03_1_WallFinishCreator_v2.cs" />
+    <Compile Include="CIT_03_2_FinishNumerator\CIT_03_2_FinishNumerator.cs" />
+    <Compile Include="CIT_03_2_FinishNumerator\CIT_03_2_FinishNumeratorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CIT_03_2_FinishNumerator\CIT_03_2_FinishNumeratorForm.Designer.cs">
+      <DependentUpon>CIT_03_2_FinishNumeratorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CIT_03_3_Insolation\InsolationAtPoint.cs" />
+    <Compile Include="CIT_03_3_Insolation\InsolationAtPointForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CIT_03_3_Insolation\InsolationAtPointForm.Designer.cs">
+      <DependentUpon>InsolationAtPointForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CIT_03_3_Insolation\InsolationRulerСreator.cs" />
+    <Compile Include="CIT_03_3_Insolation\PanelSelectionFilter.cs" />
+    <Compile Include="CIT_04_1_SquareColumnsReinforcement\FSCRT6_Settings.cs" />
+    <Compile Include="CIT_04_1_SquareColumnsReinforcement\FSCRT5_Settings.cs" />
+    <Compile Include="CIT_04_1_SquareColumnsReinforcement\FSCRT4_Settings.cs" />
+    <Compile Include="CIT_04_1_SquareColumnsReinforcement\FSCRT3_Settings.cs" />
+    <Compile Include="CIT_04_1_SquareColumnsReinforcement\FSCRT2_Settings.cs" />
+    <Compile Include="CIT_04_1_SquareColumnsReinforcement\FSCRT1_Settings.cs" />
+    <Compile Include="CIT_04_1_SquareColumnsReinforcement\CIT_04_1_1FormSquareColumnsReinforcementType6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CIT_04_1_SquareColumnsReinforcement\CIT_04_1_1FormSquareColumnsReinforcementType6.Designer.cs">
+      <DependentUpon>CIT_04_1_1FormSquareColumnsReinforcementType6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CIT_04_1_SquareColumnsReinforcement\CIT_04_1_1FormSquareColumnsReinforcementType5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CIT_04_1_SquareColumnsReinforcement\CIT_04_1_1FormSquareColumnsReinforcementType5.Designer.cs">
+      <DependentUpon>CIT_04_1_1FormSquareColumnsReinforcementType5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CIT_04_1_SquareColumnsReinforcement\CIT_04_1_1SquareColumnsReinforcementType6.cs" />
+    <Compile Include="CIT_04_1_SquareColumnsReinforcement\CIT_04_1_1SquareColumnsReinforcementType5.cs" />
+    <Compile Include="CIT_04_2_RectangularColumnsReinforcement\CIT_04_2_RectangularColumnsReinforcement.cs" />
+    <Compile Include="CIT_04_2_RectangularColumnsReinforcement\CIT_04_2_RectangularColumnsReinforcementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CIT_04_2_RectangularColumnsReinforcement\CIT_04_2_RectangularColumnsReinforcementForm.Designer.cs">
+      <DependentUpon>CIT_04_2_RectangularColumnsReinforcementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CIT_04_2_RectangularColumnsReinforcement\RCRF_Settings.cs" />
+    <Compile Include="CIT_04_3_BeamReinforcement\CIT_04_3_BeamReinforcement.cs" />
+    <Compile Include="CIT_04_3_BeamReinforcement\CIT_04_3_BeamReinforcementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CIT_04_3_BeamReinforcement\CIT_04_3_BeamReinforcementForm.Designer.cs">
+      <DependentUpon>CIT_04_3_BeamReinforcementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CIT_04_3_BeamReinforcement\BR_Settings.cs" />
+    <Compile Include="CIT_04_4_SlabReinforcement\SR_Settings.cs" />
+    <Compile Include="CIT_04_4_SlabReinforcement\CIT_04_4_SlabReinforcement.cs" />
+    <Compile Include="CIT_04_4_SlabReinforcement\CIT_04_4_SlabReinforcementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CIT_04_4_SlabReinforcement\CIT_04_4_SlabReinforcementForm.Designer.cs">
+      <DependentUpon>CIT_04_4_SlabReinforcementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CIT_04_5_StairFlightReinforcement\CIT_04_5_StairFlightReinforcement.cs" />
+    <Compile Include="CIT_04_5_StairFlightReinforcement\CIT_04_5_StairFlightReinforcementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CIT_04_5_StairFlightReinforcement\CIT_04_5_StairFlightReinforcementForm.Designer.cs">
+      <DependentUpon>CIT_04_5_StairFlightReinforcementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CIT_04_5_StairFlightReinforcement\SFR_Settings.cs" />
+    <Compile Include="CIT_04_6_HoleTransfer\CIT_04_6_HoleTransfer.cs" />
+    <Compile Include="CIT_04_7_ElementsTransfer\CIT_04_7_ElementsTransfer.cs" />
+    <Compile Include="CIT_04_7_ElementsTransfer\CIT_04_7_ElementsTransferForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CIT_04_7_ElementsTransfer\CIT_04_7_ElementsTransferForm.Designer.cs">
+      <DependentUpon>CIT_04_7_ElementsTransferForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CIT_05_4_1_MEPViewScheduleCreator_Roven\CIT_05_4_1_MEPViewScheduleCreator_Roven.cs" />
+    <Compile Include="CIT_05_4_1_MEPViewScheduleCreator_Roven\CIT_05_4_1_MEPViewScheduleCleaner_Roven.cs" />
+    <Compile Include="CopyWallOpeningsToWallFinish.cs" />
+    <Compile Include="CreateLineDimensions.cs" />
+    <Compile Include="DuctFittingSelectionFilter.cs" />
+    <Compile Include="FinishingSheet.cs" />
+    <Compile Include="ColumnCutter.cs" />
+    <Compile Include="GloryHoleCutter.cs" />
+    <Compile Include="GloryHoleRefreshElevations.cs" />
+    <Compile Include="GloryHoleRefreshMark.cs" />
+    <Compile Include="GloryHoleSaveAssignmentVersion.cs" />
+    <Compile Include="GloryHoleSaveAssignmentVersionWPF.xaml.cs">
+      <DependentUpon>GloryHoleSaveAssignmentVersionWPF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GloryHoleSettings.cs" />
+    <Compile Include="GloryHoleWPF.xaml.cs">
+      <DependentUpon>GloryHoleWPF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PipeDuctSelectionFilter.cs" />
+    <Compile Include="GloryHoleWindowsSelectionFilter.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RebarGroupCopier\RebarGroupCopierFormWPF.xaml.cs">
+      <DependentUpon>RebarGroupCopierFormWPF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RefreshDuctFittings.cs" />
+    <Compile Include="RefreshDuctFittingsErrorWPF.xaml.cs">
+      <DependentUpon>RefreshDuctFittingsErrorWPF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RefreshDuctFittingsStartWPF.xaml.cs">
+      <DependentUpon>RefreshDuctFittingsStartWPF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SharedParametersBatchAdding.cs" />
+    <Compile Include="SharedParametersBatchAddingFormWPF.xaml.cs">
+      <DependentUpon>SharedParametersBatchAddingFormWPF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SharedParametersBatchAddingItem.cs" />
+    <Compile Include="SharedParametersBatchAddingSettings.cs" />
+    <Compile Include="SystemsToSpace.cs" />
+    <Compile Include="WallSelectionFilter.cs" />
+    <Compile Include="FormRebarOutletsCreator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRebarOutletsCreator.Designer.cs">
+      <DependentUpon>FormRebarOutletsCreator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FamilyInstanceSelectionFilter.cs" />
+    <Compile Include="HeatLoss.cs" />
+    <Compile Include="MEPViewScheduleCreatorADM.cs" />
+    <Compile Include="MEPViewScheduleCreator.cs" />
+    <Compile Include="MEPViewScheduleHost.cs" />
+    <Compile Include="MEPViewScheduleHostStartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MEPViewScheduleHostStartForm.Designer.cs">
+      <DependentUpon>MEPViewScheduleHostStartForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MySQL_Test.cs" />
+    <Compile Include="ProgressBarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgressBarForm.Designer.cs">
+      <DependentUpon>ProgressBarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RebarGroupCopier\RebarGroupCopierForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RebarGroupCopier\RebarGroupCopierForm.Designer.cs">
+      <DependentUpon>RebarGroupCopierForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RevitLinkInstanceSelectionFilter.cs" />
+    <Compile Include="RebarGroupCopier\RebarGroupCopierScript.cs" />
+    <Compile Include="GroupSelectionFilter.cs" />
+    <Compile Include="RebarOutletsCreator.cs" />
+    <Compile Include="CIT_04_1_SquareColumnsReinforcement\CIT_04_1_1FormSquareColumnsReinforcementType4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CIT_04_1_SquareColumnsReinforcement\CIT_04_1_1FormSquareColumnsReinforcementType4.Designer.cs">
+      <DependentUpon>CIT_04_1_1FormSquareColumnsReinforcementType4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CIT_04_1_SquareColumnsReinforcement\CIT_04_1_1FormSquareColumnsReinforcementType3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CIT_04_1_SquareColumnsReinforcement\CIT_04_1_1FormSquareColumnsReinforcementType3.Designer.cs">
+      <DependentUpon>CIT_04_1_1FormSquareColumnsReinforcementType3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CIT_04_1_SquareColumnsReinforcement\CIT_04_1_1FormSquareColumnsReinforcementType2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CIT_04_1_SquareColumnsReinforcement\CIT_04_1_1FormSquareColumnsReinforcementType2.Designer.cs">
+      <DependentUpon>CIT_04_1_1FormSquareColumnsReinforcementType2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CIT_04_1_SquareColumnsReinforcement\CIT_04_1_1FormSquareColumnsReinforcementType1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CIT_04_1_SquareColumnsReinforcement\CIT_04_1_1FormSquareColumnsReinforcementType1.Designer.cs">
+      <DependentUpon>CIT_04_1_1FormSquareColumnsReinforcementType1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CIT_04_1_SquareColumnsReinforcement\CIT_04_1_1SquareColumnsReinforcementType4.cs" />
+    <Compile Include="CIT_04_1_SquareColumnsReinforcement\CIT_04_1_1SquareColumnsReinforcementType3.cs" />
+    <Compile Include="CIT_04_1_SquareColumnsReinforcement\CIT_04_1_1SquareColumnsReinforcementType2.cs" />
+    <Compile Include="CIT_04_1_SquareColumnsReinforcement\CIT_04_1_1SquareColumnsReinforcementType1.cs" />
+    <Compile Include="CIT_04_1_SquareColumnsReinforcement\CIT_04_1_SquareColumnsReinforcement.cs" />
+    <Compile Include="CIT_04_1_SquareColumnsReinforcement\SquareСolumnTypeSelectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CIT_04_1_SquareColumnsReinforcement\SquareСolumnTypeSelectionForm.Designer.cs">
+      <DependentUpon>SquareСolumnTypeSelectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ColumnSelectionFilter.cs" />
+    <Compile Include="FloorGenerator.cs" />
+    <Compile Include="FloorSelectionFilter.cs" />
+    <Compile Include="FloorTypeSelectorForCapitalMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FloorTypeSelectorForCapitalMaker.Designer.cs">
+      <DependentUpon>FloorTypeSelectorForCapitalMaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GloryHole.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="SpaceSelectionFilter.cs" />
+    <Compile Include="RoomSelectionFilter.cs" />
+    <Compile Include="FloorTypeSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FloorTypeSelector.Designer.cs">
+      <DependentUpon>FloorTypeSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sobirator.cs" />
+    <Compile Include="StructuralFramingSelectionFilter.cs" />
+    <Compile Include="TXTExport.cs" />
+    <Compile Include="TXTExportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TXTExportForm.Designer.cs">
+      <DependentUpon>TXTExportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VoiceRecognition.cs" />
+    <Compile Include="VoiceRecognitionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VoiceRecognitionForm.Designer.cs">
+      <DependentUpon>VoiceRecognitionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WallsReinforcement.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CIT_00_1_FillingParameterLevel\CIT_00_1_FillingParameterLevelProgressBarForm.resx">
+      <DependentUpon>CIT_00_1_FillingParameterLevelProgressBarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CIT_03_1_WallFinishCreator\CIT_03_1_WallFinishCreatorForm.resx">
+      <DependentUpon>CIT_03_1_WallFinishCreatorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CIT_03_1_WallFinishCreator_v2\CIT_03_1_WallFinishCreatorForm_v2.resx">
+      <DependentUpon>CIT_03_1_WallFinishCreatorForm_v2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CIT_03_2_FinishNumerator\CIT_03_2_FinishNumeratorForm.resx">
+      <DependentUpon>CIT_03_2_FinishNumeratorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CIT_03_3_Insolation\InsolationAtPointForm.resx">
+      <DependentUpon>InsolationAtPointForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CIT_04_1_SquareColumnsReinforcement\CIT_04_1_1FormSquareColumnsReinforcementType6.resx">
+      <DependentUpon>CIT_04_1_1FormSquareColumnsReinforcementType6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CIT_04_1_SquareColumnsReinforcement\CIT_04_1_1FormSquareColumnsReinforcementType5.resx">
+      <DependentUpon>CIT_04_1_1FormSquareColumnsReinforcementType5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CIT_04_1_SquareColumnsReinforcement\CIT_04_1_1FormSquareColumnsReinforcementType4.resx">
+      <DependentUpon>CIT_04_1_1FormSquareColumnsReinforcementType4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CIT_04_1_SquareColumnsReinforcement\CIT_04_1_1FormSquareColumnsReinforcementType3.resx">
+      <DependentUpon>CIT_04_1_1FormSquareColumnsReinforcementType3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CIT_04_1_SquareColumnsReinforcement\CIT_04_1_1FormSquareColumnsReinforcementType2.resx">
+      <DependentUpon>CIT_04_1_1FormSquareColumnsReinforcementType2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CIT_04_1_SquareColumnsReinforcement\CIT_04_1_1FormSquareColumnsReinforcementType1.resx">
+      <DependentUpon>CIT_04_1_1FormSquareColumnsReinforcementType1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CIT_04_1_SquareColumnsReinforcement\SquareСolumnTypeSelectionForm.resx">
+      <DependentUpon>SquareСolumnTypeSelectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CIT_04_2_RectangularColumnsReinforcement\CIT_04_2_RectangularColumnsReinforcementForm.resx">
+      <DependentUpon>CIT_04_2_RectangularColumnsReinforcementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CIT_04_3_BeamReinforcement\CIT_04_3_BeamReinforcementForm.resx">
+      <DependentUpon>CIT_04_3_BeamReinforcementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CIT_04_4_SlabReinforcement\CIT_04_4_SlabReinforcementForm.resx">
+      <DependentUpon>CIT_04_4_SlabReinforcementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CIT_04_5_StairFlightReinforcement\CIT_04_5_StairFlightReinforcementForm.resx">
+      <DependentUpon>CIT_04_5_StairFlightReinforcementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CIT_04_7_ElementsTransfer\CIT_04_7_ElementsTransferForm.resx">
+      <DependentUpon>CIT_04_7_ElementsTransferForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FloorTypeSelectorForCapitalMaker.resx">
+      <DependentUpon>FloorTypeSelectorForCapitalMaker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRebarOutletsCreator.resx">
+      <DependentUpon>FormRebarOutletsCreator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MEPViewScheduleHostStartForm.resx">
+      <DependentUpon>MEPViewScheduleHostStartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgressBarForm.resx">
+      <DependentUpon>ProgressBarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FloorTypeSelector.resx">
+      <DependentUpon>FloorTypeSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RebarGroupCopier\RebarGroupCopierForm.resx">
+      <DependentUpon>RebarGroupCopierForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TXTExportForm.resx">
+      <DependentUpon>TXTExportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VoiceRecognitionForm.resx">
+      <DependentUpon>VoiceRecognitionForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="CIT_00_0_GoogleSheets\CITRUSGoogle.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\Sobirator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FloorGenerator_Large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FloorGenerator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sobirator_Large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CapitalMaker_X.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CapitalMaker_Large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CapitalMaker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SquareColumnsReinforcement_Type1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SquareColumnsReinforcement_Type2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SquareColumnsReinforcement_Type3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SquareColumnsReinforcement_Type4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SquareColumnsReinforcement_Type5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SquareColumnsReinforcement_Type6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formSquareColumnsReinforcementType1_Section.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formSquareColumnsReinforcementType1_3D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formSquareColumnsReinforcementType1_MainOverlappingRods.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formSquareColumnsReinforcementType1_MainWeldingRods.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formSquareColumnsReinforcementType1_ColumnSectionOffset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formSquareColumnsReinforcementType2_Section.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formSquareColumnsReinforcementType2_3D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formSquareColumnsReinforcementType3_Section.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formSquareColumnsReinforcementType3_3D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formSquareColumnsReinforcementType4_Section.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formSquareColumnsReinforcementType4_3D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VoiceRecognition.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VoiceRecognition_Large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VoiceRecognition_Small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formSquareColumnsReinforcementType5_3D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formSquareColumnsReinforcementType5_Section.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formSquareColumnsReinforcementType6_3D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formSquareColumnsReinforcementType6_Section.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SquareColumnsReinforcement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SquareColumnsReinforcement_Large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RebarGroupCopier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RebarGroupCopier_Large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RebarOutletsCreatorSketch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RebarOutletsCreator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RebarOutletsCreator_Large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ScheduleTXTExport.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ScheduleTXTExport_Large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ScheduleCreator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ScheduleCreator_Large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ScheduleHost.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ScheduleHost_Large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formRectangularColumnsReinforcement_3D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formRectangularColumnsReinforcement_Section.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formRectangularColumnsReinforcement_ColumnSectionOffset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RectangularColumnsReinforcement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RectangularColumnsReinforcement_Large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formBeamReinforcement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formBeamReinforcement_Section.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BeamReinforcement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BeamReinforcement_Large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\staircaseReinforcement_MainSection.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\staircaseReinforcement_Node1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\staircaseReinforcement_Node2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\staircaseReinforcement_Node3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StaircaseReinforcement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StaircaseReinforcement_Large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WallFinishCreator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WallFinishCreator_Large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FinishNumerator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FinishNumerator_Large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HoleTransfer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HoleTransfer_Large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SlabReinforcement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SlabReinforcement_Large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SlabReinforcement_Small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ElementsTransfer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ElementsTransfer_Large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InsolationAtPoint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InsolationAtPoint_Large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GloryHoleForm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GloryHoleIcon_Large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GloryHoleIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GloryHoleCutterIcon_Large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GloryHoleCutterIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GloryHoleRefreshElevationsIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GloryHoleRefreshElevationsIcon_Large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GloryHoleRefreshMarkIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GloryHoleRefreshMarkIcon_Large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SystemsToSpaceIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SystemsToSpaceIcon_Large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GloryHoleSaveAssignmentVersionIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GloryHoleSaveAssignmentVersionIcon_Large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RefreshDuctFittings_Large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RefreshDuctFittings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="GloryHoleSaveAssignmentVersionWPF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GloryHoleWPF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RebarGroupCopier\RebarGroupCopierFormWPF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RefreshDuctFittingsErrorWPF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RefreshDuctFittingsStartWPF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SharedParametersBatchAddingFormWPF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SharedParametersBatchAddingIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SharedParametersBatchAddingIcon_Large.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\MaterialDesignThemes.4.3.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.3.0\build\MaterialDesignThemes.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MaterialDesignThemes.4.3.0\build\MaterialDesignThemes.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MaterialDesignThemes.4.3.0\build\MaterialDesignThemes.targets'))" />
+  </Target>
+</Project>

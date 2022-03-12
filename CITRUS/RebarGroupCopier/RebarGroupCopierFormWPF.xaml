@@ -1,0 +1,15 @@
+﻿<Window x:Class="CITRUS.RebarGroupCopier.RebarGroupCopierFormWPF"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CITRUS.RebarGroupCopier"
+             mc:Ignorable="d" 
+             Title="Копирователь групп" Height="250" Width="300" WindowStyle="ToolWindow"
+             WindowStartupLocation="CenterScreen" MinWidth="300" MinHeight="250" MaxWidth="300" MaxHeight="250"
+             KeyDown="RebarGroupCopierFormWPF_KeyDown">
+    <Grid>
+        <Button x:Name="btn_Ok" Content="Ок" HorizontalAlignment="Right" Margin="0,0,125,10" VerticalAlignment="Bottom" Width="100" Height="25" Click="btn_Ok_Click"/>
+        <Button x:Name="btn_Cancel" Content="Отмена" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="100" Height="25" Click="btn_Cancel_Click"/>
+    </Grid>
+</Window>

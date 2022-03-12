@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="InsolationAtPoint" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\InsolationAtPoint.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RebarOutletsCreator_Large" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RebarOutletsCreator_Large.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RectangularColumnsReinforcement" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RectangularColumnsReinforcement.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="formSquareColumnsReinforcementType4_3D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\formSquareColumnsReinforcementType4_3D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ElementsTransfer_Large" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ElementsTransfer_Large.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="formSquareColumnsReinforcementType5_3D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\formSquareColumnsReinforcementType5_3D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="formSquareColumnsReinforcementType1_MainOverlappingRods" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\formSquareColumnsReinforcementType1_MainOverlappingRods.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SquareColumnsReinforcement_Type4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SquareColumnsReinforcement_Type4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="formSquareColumnsReinforcementType1_Section1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\formSquareColumnsReinforcementType1_Section.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="formRectangularColumnsReinforcement_Section" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\formRectangularColumnsReinforcement_Section.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ScheduleHost_Large" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ScheduleHost_Large.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sobirator_Large" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sobirator_Large.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="formSquareColumnsReinforcementType3_3D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\formSquareColumnsReinforcementType3_3D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="formSquareColumnsReinforcementType2_Section" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\formSquareColumnsReinforcementType2_Section.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SquareColumnsReinforcement_Large" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SquareColumnsReinforcement_Large.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SlabReinforcement_Large" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SlabReinforcement_Large.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="formSquareColumnsReinforcementType1_3D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\formSquareColumnsReinforcementType1_3D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoleTransfer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoleTransfer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SlabReinforcement" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SlabReinforcement.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="formSquareColumnsReinforcementType1_ColumnSectionOffset" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\formSquareColumnsReinforcementType1_ColumnSectionOffset.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="formSquareColumnsReinforcementType4_Section" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\formSquareColumnsReinforcementType4_Section.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="formSquareColumnsReinforcementType2_3D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\formSquareColumnsReinforcementType2_3D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SlabReinforcement_Small" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SlabReinforcement_Small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="staircaseReinforcement_Node3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\staircaseReinforcement_Node3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="formRectangularColumnsReinforcement_ColumnSectionOffset" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\formRectangularColumnsReinforcement_ColumnSectionOffset.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sobirator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sobirator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FloorGenerator_Large" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FloorGenerator_Large.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ElementsTransfer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ElementsTransfer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FloorGenerator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FloorGenerator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="formSquareColumnsReinforcementType6_Section" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\formSquareColumnsReinforcementType6_Section.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoleTransfer_Large" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoleTransfer_Large.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="formBeamReinforcement_Section" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\formBeamReinforcement_Section.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SquareColumnsReinforcement" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SquareColumnsReinforcement.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="formSquareColumnsReinforcementType1_MainWeldingRods" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\formSquareColumnsReinforcementType1_MainWeldingRods.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ScheduleTXTExport_Large" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ScheduleTXTExport_Large.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="formRectangularColumnsReinforcement_3D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\formRectangularColumnsReinforcement_3D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ScheduleHost" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ScheduleHost.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CapitalMaker_Large" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CapitalMaker_Large.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InsolationAtPoint_Large" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\InsolationAtPoint_Large.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WallFinishCreator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WallFinishCreator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FinishNumerator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FinishNumerator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WallFinishCreator_Large" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WallFinishCreator_Large.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BeamReinforcement_Large" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BeamReinforcement_Large.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CapitalMaker_X" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CapitalMaker_X.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BeamReinforcement" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BeamReinforcement.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RebarGroupCopier_Large" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RebarGroupCopier_Large.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SquareColumnsReinforcement_Type5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SquareColumnsReinforcement_Type5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VoiceRecognition_Large" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\VoiceRecognition_Large.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="staircaseReinforcement_Node2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\staircaseReinforcement_Node2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="staircaseReinforcement_Node1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\staircaseReinforcement_Node1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VoiceRecognition" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\VoiceRecognition.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RebarGroupCopier" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RebarGroupCopier.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ScheduleCreator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ScheduleCreator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RectangularColumnsReinforcement_Large" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RectangularColumnsReinforcement_Large.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="formSquareColumnsReinforcementType6_3D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\formSquareColumnsReinforcementType6_3D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SquareColumnsReinforcement_Type2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SquareColumnsReinforcement_Type2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SquareColumnsReinforcement_Type3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SquareColumnsReinforcement_Type3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="StaircaseReinforcement" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StaircaseReinforcement.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CapitalMaker" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CapitalMaker.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="formBeamReinforcement" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\formBeamReinforcement.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ScheduleCreator_Large" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ScheduleCreator_Large.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="staircaseReinforcement_MainSection" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\staircaseReinforcement_MainSection.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RebarOutletsCreatorSketch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RebarOutletsCreatorSketch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VoiceRecognition_Small" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\VoiceRecognition_Small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SquareColumnsReinforcement_Type6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SquareColumnsReinforcement_Type6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="formSquareColumnsReinforcementType5_Section" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\formSquareColumnsReinforcementType5_Section.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ScheduleTXTExport" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ScheduleTXTExport.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RebarOutletsCreator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RebarOutletsCreator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FinishNumerator_Large" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FinishNumerator_Large.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SquareColumnsReinforcement_Type1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SquareColumnsReinforcement_Type1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="StaircaseReinforcement_Large" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StaircaseReinforcement_Large.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="formSquareColumnsReinforcementType3_Section" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\formSquareColumnsReinforcementType3_Section.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GloryHoleForm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GloryHoleForm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GloryHoleIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GloryHoleIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GloryHoleIcon_Large" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GloryHoleIcon_Large.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GloryHoleCutterIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GloryHoleCutterIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GloryHoleCutterIcon_Large" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GloryHoleCutterIcon_Large.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GloryHoleRefreshElevationsIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GloryHoleRefreshElevationsIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GloryHoleRefreshElevationsIcon_Large" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GloryHoleRefreshElevationsIcon_Large.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GloryHoleRefreshMarkIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GloryHoleRefreshMarkIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GloryHoleRefreshMarkIcon_Large" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GloryHoleRefreshMarkIcon_Large.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GloryHoleSaveAssignmentVersionIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GloryHoleSaveAssignmentVersionIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GloryHoleSaveAssignmentVersionIcon_Large" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GloryHoleSaveAssignmentVersionIcon_Large.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SystemsToSpaceIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SystemsToSpaceIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SystemsToSpaceIcon_Large" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SystemsToSpaceIcon_Large.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RefreshDuctFittings" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RefreshDuctFittings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RefreshDuctFittings_Large" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RefreshDuctFittings_Large.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SharedParametersBatchAddingIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SharedParametersBatchAddingIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SharedParametersBatchAddingIcon_Large" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SharedParametersBatchAddingIcon_Large.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>
