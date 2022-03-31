@@ -338,8 +338,15 @@ namespace CITRUS.CIT_04_4_SlabReinforcement
                         //Устройство обрамления по всем контурам перекрытия
                         foreach (CurveLoop cl in curveLoopList)
                         {
-                            foreach (Line ln in cl)
+                            foreach (Curve cv in cl)
                             {
+                                Line ln = null;
+                                if (!cv.IsCyclic)
+                                {
+                                    ln = (Line)cv;
+                                }
+                                else continue;
+
                                 FamilyInstance fi = doc.Create.NewFamilyInstance(myFace, ln, targetPerimeterFramingFamilySymbol);
                                 fi.LookupParameter("Защитный слой верх").Set(perimeterFramingTopCoverLayer);
                                 fi.LookupParameter("Защитный слой низ").Set(perimeterFramingBottomCoverLayer);

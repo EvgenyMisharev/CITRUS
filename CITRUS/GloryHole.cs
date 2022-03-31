@@ -57,6 +57,7 @@ namespace CITRUS
             //Получение перекрытий из связанного файла
             List<Floor> floorsInLinkList = new FilteredElementCollector(linkDoc)
                 .OfCategory(BuiltInCategory.OST_Floors)
+                .OfClass(typeof(Floor))
                 .WhereElementIsNotElementType()
                 .Cast<Floor>()
                 .Where(f => f.get_Parameter(BuiltInParameter.FLOOR_PARAM_IS_STRUCTURAL).AsInteger() == 1)
@@ -144,6 +145,12 @@ namespace CITRUS
 
             List<FamilyInstance> pipeWallIntersectionPointList = new List<FamilyInstance>();
             List<FamilyInstance> pipeFloorIntersectionPointList = new List<FamilyInstance>();
+            BasePoint basePoint = new FilteredElementCollector(doc)
+                .OfCategory(BuiltInCategory.OST_ProjectBasePoint)
+                .WhereElementIsNotElementType()
+                .Cast<BasePoint>()
+                .First();
+            double basePointZ = basePoint.SharedPosition.Z;
             using (Transaction t = new Transaction(doc))
             {
                 t.Start("Размещение точек пересечения");
@@ -195,9 +202,9 @@ namespace CITRUS
                                     XYZ intersectionCurveStartPoint = intersection.GetCurveSegment(0).GetEndPoint(0);
                                     XYZ intersectionCurveEndPoint = intersection.GetCurveSegment(0).GetEndPoint(1);
                                     XYZ originIntersectionCurve = ((intersectionCurveStartPoint + intersectionCurveEndPoint) / 2) - (intersectionPointHeight / 2) * XYZ.BasisZ;
-                                    originIntersectionCurve = new XYZ(originIntersectionCurve.X, originIntersectionCurve.Y, RoundToIncrement(originIntersectionCurve.Z, 10) - (lvl.Elevation));
+                                    originIntersectionCurve = new XYZ(originIntersectionCurve.X, originIntersectionCurve.Y, RoundToIncrement(originIntersectionCurve.Z, 10) - (lvl.Elevation) - basePointZ);
 
-                                    FamilyInstance intersectionPoint = doc.Create.NewFamilyInstance(originIntersectionCurve
+                                   FamilyInstance intersectionPoint = doc.Create.NewFamilyInstance(originIntersectionCurve
                                         , intersectionPointRectangularWallFamilySymbol
                                         , lvl
                                         , StructuralType.NonStructural) as FamilyInstance;
@@ -251,7 +258,7 @@ namespace CITRUS
                                         XYZ intersectionCurveStartPoint = intersection.GetCurveSegment(0).GetEndPoint(0);
                                         XYZ intersectionCurveEndPoint = intersection.GetCurveSegment(0).GetEndPoint(1);
                                         XYZ originIntersectionCurve = ((intersectionCurveStartPoint + intersectionCurveEndPoint) / 2) - (intersectionPointHeight / 2) * XYZ.BasisZ;
-                                        originIntersectionCurve = new XYZ(originIntersectionCurve.X, originIntersectionCurve.Y, RoundToIncrement(originIntersectionCurve.Z, 10) - (lvl.Elevation));
+                                        originIntersectionCurve = new XYZ(originIntersectionCurve.X, originIntersectionCurve.Y, RoundToIncrement(originIntersectionCurve.Z, 10) - (lvl.Elevation) - basePointZ);
 
                                         FamilyInstance intersectionPoint = doc.Create.NewFamilyInstance(originIntersectionCurve
                                             , intersectionPointRectangularWallFamilySymbol
@@ -298,7 +305,7 @@ namespace CITRUS
                                         XYZ intersectionCurveStartPoint = intersection.GetCurveSegment(0).GetEndPoint(0);
                                         XYZ intersectionCurveEndPoint = intersection.GetCurveSegment(0).GetEndPoint(1);
                                         XYZ originIntersectionCurve = ((intersectionCurveStartPoint + intersectionCurveEndPoint) / 2) - (intersectionPointHeight / 2) * XYZ.BasisZ;
-                                        originIntersectionCurve = new XYZ(originIntersectionCurve.X, originIntersectionCurve.Y, RoundToIncrement(originIntersectionCurve.Z, 10) - (lvl.Elevation));
+                                        originIntersectionCurve = new XYZ(originIntersectionCurve.X, originIntersectionCurve.Y, RoundToIncrement(originIntersectionCurve.Z, 10) - (lvl.Elevation) - basePointZ);
 
                                         FamilyInstance intersectionPoint = doc.Create.NewFamilyInstance(originIntersectionCurve
                                             , intersectionPointRectangularWallFamilySymbol
@@ -603,7 +610,7 @@ namespace CITRUS
                             }
                             XYZ pointCenterResult = new XYZ(pointCenterX
                                 , pointCenterY
-                                , pointCenterZ - (doc.GetElement(pipeIntersectionPointGroup.First().LevelId) as Level).Elevation);
+                                , pointCenterZ - (doc.GetElement(pipeIntersectionPointGroup.First().LevelId) as Level).Elevation - basePointZ);
 
                             FamilyInstance intersectionPoint = doc.Create.NewFamilyInstance(pointCenterResult
                             , intersectionPointRectangularWallFamilySymbol
@@ -773,7 +780,7 @@ namespace CITRUS
                             }
                             XYZ pointCenterResult = new XYZ(pointCenterX
                                 , pointCenterY
-                                , (pipeIntersectionPointGroup.First().Location as LocationPoint).Point.Z - (doc.GetElement(pipeIntersectionPointGroup.First().LevelId) as Level).Elevation);
+                                , (pipeIntersectionPointGroup.First().Location as LocationPoint).Point.Z - (doc.GetElement(pipeIntersectionPointGroup.First().LevelId) as Level).Elevation - basePointZ);
 
                             FamilyInstance intersectionPoint = doc.Create.NewFamilyInstance(pointCenterResult
                             , intersectionPointRectangularFloorFamilySymbol
